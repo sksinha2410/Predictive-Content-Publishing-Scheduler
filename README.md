@@ -228,10 +228,25 @@ The AI generates:
 
 ## 🔒 Security Notes
 
+### Implemented Security Features
+- ✅ Rate limiting on all API endpoints (100 requests/15 min)
+- ✅ Stricter rate limiting on AI endpoints (20 requests/hour)
+- ✅ Environment variables for sensitive data
+- ✅ MongoDB schema validation
+- ✅ Error handling without exposing sensitive details
+- ✅ Git security (.gitignore for secrets)
+
+### Production Recommendations
 - Never commit `.env` files with real API keys
 - Use environment variables for sensitive data
 - Keep your OpenAI API key secure
 - Implement authentication for production use
+- Enable HTTPS/SSL
+- Configure CORS for specific origins
+- Add input sanitization
+- Set up monitoring and logging
+
+See [SECURITY.md](SECURITY.md) for detailed security documentation.
 
 ## 🚀 Deployment
 
