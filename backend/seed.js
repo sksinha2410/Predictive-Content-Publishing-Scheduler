@@ -254,10 +254,7 @@ const samplePosts = [
 
 async function seedDatabase() {
   try {
-    await mongoose.connect(MONGODB_URI, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    await mongoose.connect(MONGODB_URI);
 
     console.log('Connected to MongoDB');
 
